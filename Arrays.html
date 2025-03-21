@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays.html</title>
+</head>
+<body>
+    <script>
+        let myArr = ["apple", "banana", "orange", "grapes"];
+        console.log("Length of myArr Array is - " + myArr.length);
+
+        const fruits = ["apple", "banana", "orange", "grapes"];
+        let str = fruits.toString();
+        console.log(str);
+        console.log("Data type of fruits array is - " + typeof fruits);
+        console.log("Data type of str is - " + typeof str);
+
+        console.log("the fourth element of fruits array is - " + fruits.at(3));
+        console.log("the fourth element of fruits array using [] method is - " + fruits[3]);
+        console.log("the fourth element of fruits array using negative [] indexing method is - " + fruits[-1]);
+        console.log("the fourth element of fruits array using -ve indexing using at() method is - " + fruits.at(-1));
+
+        str = fruits.join("$");
+        console.log("Joining the elements of fruits array using join('*') method - " + str);
+
+        let poppedItem = fruits.pop();
+        console.log("Using pop() method to pop item from fruits array- " + poppedItem);
+        console.log("The values in fruits array now are - "+ fruits);
+
+        fruits.push("olives");
+        console.log("The fruits array after push() - " + fruits);
+
+        let shiftedItem = fruits.shift();
+        console.log("The shifted item is - "+ shiftedItem);
+        console.log("The values in fruits array now are - "+ fruits);
+
+        fruits.unshift("coconut");
+        console.log("Values in fruits now are - " + fruits);
+
+        console.log("Using concat() method to join arrays myArr and fruits - "+ myArr.concat(fruits));
+        console.log(myArr);
+        console.log(fruits);
+
+        const names = ["James", "Ahir", "Dino", "Homer"];
+        console.log("Values in names array - "+names);
+
+        names.copyWithin(1,2,4);
+        console.log("Result of copywithin(1,2,2) on names array - "+ names);
+
+        let numbers = [1,2,3,4,5,6];
+        numbers.copyWithin(0, 2, 4);
+        console.log(numbers);
+
+
+        //Now we will work with two dimensional arrays
+
+        console.log("\n Here two dimensional arrays begin: \n");
+
+        let arrayTwoDimensions = [
+            ["James", "Olivia", "Addison", "Roman"],
+            ["Bollevard", "Brown", "Redux", "Nectar"],
+            [21, 34, 54, 12]        
+        ];
+        console.log(arrayTwoDimensions);
+
+        let firstName = arrayTwoDimensions[0][0];
+        console.log("Firstname: " + firstName);
+        let surName = arrayTwoDimensions[1][0];
+        console.log("Surname: "+ surName);
+        let age = arrayTwoDimensions[2][0];
+        console.log("Age: "+ age);
+
+        let arr = [1,2,3];
+        let [a,b,c,d =12] = arr;
+        console.log(a);
+        console.log(c);
+        console.log(d);
+        console.log(arr);
+
+        console.log("I will flat the arrayTwoDimensions to a single dimension array:");
+        let oneDimesionArray = arrayTwoDimensions.flat();
+        console.log("The result is - "+ oneDimesionArray);
+
+        let arrs =[10,20,30,40,50,60,70,80];
+        console.log("original arrs: "+arrs);
+        console.log("splice() to remove 4th element 40 from array: ");
+        arrs.splice(3, 1);
+        console.log("spliced arrs: "+arrs);
+
+    </script>
+    
+</body>
+</html>
